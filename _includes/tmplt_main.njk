@@ -3,30 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" contect="width=device-width initial-scale=1.0">
-    <title>Thank you box</title>
-    <link rel="stylesheet" href="style.css">
+    <title>
+        {{title}}
+    </title>
+
+    <!-- Google Font: Roboto (complete family) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css">
 </head>
-<body> 
-   <nav><!--nav Bar-->
-    <div>
-        <img src="cca_figma.png" alt="CCA Group a.s.">
-        <a href="index.html">Home</a>
-        <a href="how-does-it-work.html">How does it work?</a>
-        <a href="newpage.html">Let´s do it!</a>
-        <a href="">About us</a>       
-    </div>
-   </nav>
-    <!--Title & Text-->
+<body>
+    <!-- MENU -->
+        <nav class="menu">
+            <ul class="menu__list">
+                <!-- <li class="menu__img"><img src="/images/logo.svg" alt="Logo"></li> -->
+                <li class="menu__item"><a href="/index/" class="menu__link">Home</a></li>
+                <li class="menu__item"><a href="/pokoje/" class="menu__link">How does it work</a></li>
+                <li class="menu__item"><a href="/vybaveni/" class="menu__link">Inspiration</a></li>
+                <li class="menu__item"><a href="/galerie/" class="menu__link">Let´s do it</a></li>
+                <li class="menu__item"><a href="/aboutme/" class="menu__link">About me</a></li>
+            </ul>
+        </nav>
+    <!-- MENU END -->
+    <input type="checkbox">
+    <!--CONTENT-->
     <main>
         {{content | safe}}
     </main>
+    <!-- FOOTER -->
     <footer>
-        <div >
-                <!-- <a href="https://www.facebook.com", target="_blank"><img src="facebookicon.png"></a>
-                <a href="https://www.linkedin.com/hp", target="_blank"><img src="lnicon.png"></a> -->
-                <p>+420 123 456 789</p>
-                <p>Made with love form TYN</p>
-                <a href="https://www.cca.cz/" target="_blank">www.cca.cz</a>
+        <nav class="footer">
+            <ul class="footer__list">
+                <!-- <li class="menu__img"><img src="/images/logo.svg" alt="Logo"></li> -->
+                <li class="footer__item"><a href="https://www.facebook.com" class="footer__link" target="_blank"><img src="facebookicon.png"></a></li>
+                <li class="footer__item"><a href="https://www.linkedin.com/hp" class="footer__link" target="_blank"><img src="lnicon.png"></a></li>
+                <li class="footer__item"><p><span class="footer_title">+421 731 433 567</span></p></li>
+                <li class="footer__item"><p></p></li>
+                <li class="footer__item"><a href="/aboutme/" class="menu__link">About me</a></li>
+            </ul>
+        </nav>
+        <div class="footer">
+                <a class="footer__link" href="https://www.facebook.com", target="_blank"><img src="facebookicon.png"></a>
+                <a class="footer__link" href="https://www.linkedin.com/hp", target="_blank"><img src="lnicon.png"></a>
+                <p class="footer__number">+420 731 433 567</p>
+                <p class="footer__text">Made with love from TYN</p>
+                <a class="footer__link" href="https://www.cca.cz/" target="_blank">www.cca.cz</a>
         </div>
     </footer>
 </body>

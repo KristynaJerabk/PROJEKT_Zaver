@@ -1,0 +1,110 @@
+/* intuitivnější box-sizing pro všechny prvky na stránce */
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+:root {
+	--blue: #00469A;
+	--red: #FF4438;
+    --grey-800: hsl(0, 0%, 80%);
+    --grey-600: hsl(0, 0%, 60%);
+
+	/* --grey-300: hsl(0, 0%, 30%); */
+	/* --grey-400: hsl(0, 0%, 40%); */
+	/* --grey-500: hsl(0, 0%, 50%); */
+
+	/* --primary: #004769;
+	--accent: #fc0; */
+
+	--font-default: 'Roboto', sans-serif;
+
+	--spacer: 1rem;
+	--spacer-quarter: calc(var(--spacer) / 4);
+	--spacer-half: calc(var(--spacer) / 2);
+	--spacer-bigger: calc(var(--spacer) * 1.5);
+	--spacer-double: calc(var(--spacer) * 2);
+}
+
+body {
+	margin: 0;
+	font-family: var(--font-default);
+	background-color: var(--grey-600)
+}
+/*
+ **************************************
+	MENU
+ **************************************
+*/
+.menu {
+    background-color: var(--blue);
+    color:var(--grey-800)
+}
+.menu__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+    justify-content: flex-end;
+}
+.menu__item {
+	margin: 0;
+	padding: 0;
+    
+}
+.menu__link {
+	display: block;
+	padding: var(--spacer-half) var(--spacer);
+	font-family: var(--font-default);
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.menu__item:hover {
+	background-color: var(--grey-600);
+    color: var(--blue);
+}
+
+.menu__link:hover {
+	background-color: var(--grey-600);
+    color: var(--blue);
+}
+/*
+ **************************************
+	FOOTER
+ **************************************
+*/
+.footer {
+    background-color: var(--grey-600);
+    display: flex;
+}
+.menu__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+    justify-content: flex-end;
+}
+.menu__item {
+	margin: 0;
+	padding: 0;
+    
+}
+.menu__link {
+	display: block;
+	padding: var(--spacer-half) var(--spacer);
+	font-family: var(--font-default);
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.menu__item:hover {
+	background-color: var(--grey-600);
+    color: var(--blue);
+}
+
+.menu__link:hover {
+	background-color: var(--grey-600);
+    color: var(--blue);
