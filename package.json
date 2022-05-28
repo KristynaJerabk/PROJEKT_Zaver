@@ -1,0 +1,23 @@
+{
+  "name": "projekt_zaver",
+  "version": "1.0.0",
+  "description": "Projekt Závěrečný projekt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KristynaJerabk/PROJEKT_Zaver.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KristynaJerabk/PROJEKT_Zaver/issues"
+  },
+  "homepage": "https://github.com/KristynaJerabk/PROJEKT_Zaver#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1"
+  }
+}
