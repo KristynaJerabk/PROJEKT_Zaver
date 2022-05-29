@@ -7,6 +7,9 @@
         {{title}}
     </title>
 
+    <!-- FAVI ICON -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+
     <!-- Google Font: Roboto (complete family) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,11 +18,16 @@
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
     <!-- MENU -->
         <nav class="menu">
+
+            <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+
+            <label for="menu-checkbox" class="menu__toggler"><img class="menu__icon" src="/images/hamburger.ico" alt=""></label>
+
             <ul class="menu__list">
-                <!-- <li class="menu__img"><img src="/images/logo.svg" alt="Logo"></li> -->
                 <li class="menu__item"><a href="/index/" class="menu__link">Home</a></li>
                 <li class="menu__item"><a href="/pokoje/" class="menu__link">How does it work</a></li>
                 <li class="menu__item"><a href="/vybaveni/" class="menu__link">Inspiration</a></li>
@@ -28,30 +36,32 @@
             </ul>
         </nav>
     <!-- MENU END -->
-    <input type="checkbox">
+
     <!--CONTENT-->
     <main>
         {{content | safe}}
     </main>
+
     <!-- FOOTER -->
     <footer>
-        <nav class="footer">
-            <ul class="footer__list">
-                <!-- <li class="menu__img"><img src="/images/logo.svg" alt="Logo"></li> -->
-                <li class="footer__item"><a href="https://www.facebook.com" class="footer__link" target="_blank"><img src="facebookicon.png"></a></li>
-                <li class="footer__item"><a href="https://www.linkedin.com/hp" class="footer__link" target="_blank"><img src="lnicon.png"></a></li>
-                <li class="footer__item"><p><span class="footer_title">+421 731 433 567</span></p></li>
-                <li class="footer__item"><p></p></li>
-                <li class="footer__item"><a href="/aboutme/" class="menu__link">About me</a></li>
-            </ul>
-        </nav>
-        <div class="footer">
-                <a class="footer__link" href="https://www.facebook.com", target="_blank"><img src="facebookicon.png"></a>
-                <a class="footer__link" href="https://www.linkedin.com/hp", target="_blank"><img src="lnicon.png"></a>
-                <p class="footer__number">+420 731 433 567</p>
-                <p class="footer__text">Made with love from TYN</p>
-                <a class="footer__link" href="https://www.cca.cz/" target="_blank">www.cca.cz</a>
+
+        <div class="wrapper">
+            <div class="footer__list">
+                <ul class="footer__right">
+                    <li class="footer__item">Made with love <img class= "footer__heart" src="/images/heart.svg" alt=""> by TYN</li>
+                    <li><a claas = "footer__link" href="www.facebook.com", target="_blank"> <img class= "footer__icon" src="/images/fb_icon.svg" alt="Facebook"></a></li>
+                    <li><a class="footer__link" href="https://www.linkedin.com/hp", target="_blank"><img class= "footer__icon" src="/images/ln_icon.svg" alt="Linkedin"></a></li>
+                </ul>
+            </div>
+
+            <div class="footer__list">
+                <ul class="footer__left">
+                    <li class="footer__item">&copy 2022</li>
+                    <li class="footer__item--logo">Lo<span class="red">g</span>o</li>
+                </ul>
+            </div>
         </div>
+
     </footer>
 </body>
 </html>
