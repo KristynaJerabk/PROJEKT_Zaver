@@ -199,6 +199,7 @@ body {
 	list-style: none;
 	text-decoration: none;
 }
+.button__primary--reset
 
 /*
  **************************************
@@ -215,3 +216,32 @@ body {
 	FORM
  **************************************
 */
+
+/*
+ **************************************
+	INSPIRATION
+ **************************************
+*/
+
+.Inspiration__Wrapper {
+	display: grid;
+	grid-template-columns: auto;
+	gap: 0.25em;
+}
+
+.Inspiration {
+	padding: 0px;
+	line-height: 1.5;
+	text-align: center;
+	color: grey;
+	box-shadow: 0px 4px 6px var(--blue-light);
+    border-radius: 10px;
+}
+.blockquote__inspiration {
+	margin: 0.5em;
+}
+
+@media (min-width: 800px) {
+	grid-template-columns: repeat(3, 50%);
+
+}

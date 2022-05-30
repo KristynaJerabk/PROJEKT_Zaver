@@ -2,19 +2,21 @@
 layout: tmplt_main.njk
 title: Let´s do it!
 ---
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <p>Please fill in the fields with the persons information you want to thank to</p>
-        <form method="GET"></form>
-        <div>
-            Name: <br>
-            <input type="text" name="Name"><br>
-            Email: <br>
-            <input type="email" name="Email"><br>
-            <p>Please insert you name, if you don´t want stay anonymous</p>
-            Your name: <br>
-            <input type="text" name="Your name"><br>
-            <p>Please insert the message. And be creative. Believe me, you are doing great thing.</p>
-            Message: <br>
-            <input type="text" name="Message"><br>
-            <input type="submit" value="Send it!" >
-            <input type="reset" value="Start over">
+    <form method="GET">
+        <div class="form">
+            <label for="Name">Name</label>
+            <input type="text" name="Name" id="Name" autofocus><br>
+            <label for="E-mail">E-mail</label>
+            <input type="email" name="E-mail" id="E-mail"><br>
+            <label for="YourName">Please insert you name, if you don´t want stay anonymous</p>
+                Your name: </label>
+            <input type="text" name="Your name" id="YourName"><br>
+            <label for="Message">Please insert the message. And be creative. Believe me, you are doing great thing.</p>
+                Message:</label>
+            <input type="text" name="Message" id="Message"><br>
+            <input type="submit" value="Send it!"  id="SendIt">
+            <input type="reset" value="Start over" id="StartOver">
+        </div>
+    </form>

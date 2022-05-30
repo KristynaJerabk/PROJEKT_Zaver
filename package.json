@@ -20,5 +20,8 @@
   "homepage": "https://github.com/KristynaJerabk/PROJEKT_Zaver#readme",
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1"
+  },
+  "dependencies": {
+    "nodemailer": "^6.7.5"
   }
 }
