@@ -3,7 +3,7 @@ html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
 :root {
-	--blue: rgb(0, 69, 153);
+	--blue: #004599;
 	--blue-light:rgba(0, 69, 153, 0.575);
 	--red: rgb(255, 68, 56);
 	--white: #FFFFFF;
@@ -111,6 +111,21 @@ main {
 	.menu__link:hover {
 		border-bottom: 2px solid var(--blue);
 	}
+}
+/*
+ **************************************
+	HOME
+ **************************************
+*/
+.image__background {
+	max-height: 650px;
+	max-width: 650px;
+}
+.home {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 /*
@@ -245,20 +260,33 @@ main {
 .inputs {
 	display: flex;
 	flex-direction: column;
-	color: grey;
-	line-height: 1.5em;
 }
+.part {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 6em;
+	line-height: 1.5em;
+	color: grey;
+}
+
 .input__form {
 	border: none;
 	box-shadow: 0px 4px 6px var(--blue-light);
 	border-radius: 10px;
 	height: 2.5em;
+	font-family: 'Roboto'
 	
+}
+
+.inpu__form:focus {
+	color: grey;
+
 }
 .textarea__form {
 	border: none;
-	box-shadow: 0px 4px 6px var(--blue-light);
+	box-shadow: 0px 15px 10px var(--blue);
 	border-radius: 10px;
+	font-family: 'Roboto'
 
 }
 .asterix {
@@ -272,6 +300,17 @@ main {
 }
 
 @media (min-width: 800px) {
+	
+	.inputs {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	.part {
+		justify-content: flex-start;
+	}
+
 	.buttons {
 		flex-direction: row;
 		justify-content: center;
@@ -280,7 +319,7 @@ main {
 		margin-top: 10%;
 	}
 	.input__form {
-		width: 300px;
+		width: 400px;
 	}
 
 }

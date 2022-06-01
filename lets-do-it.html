@@ -4,23 +4,31 @@ title: Let´s do it!
 ---
 <script src="https://smtpjs.com/v3/smtp.js"></script>
 
-    <form method="GET">
+    <form action="https://mailthis.to/jerabkova.tyna@gmail.com" method="POST">
         <div class="form">
             <div class="inputs">
-                <div class=""></div>
-                <label for="Name">Please fill in the fields with the persons information you want to thank to. <br>
-                 Name <span class="asterix">*</span>:</label>
-                <input class="input__form" type="text" name="Name" id="Name" autofocus required><br>
-                <label for="Surname">Surname <span class="asterix">*</span>:</label>
-                   <input class="input__form" type="text" name="Surname" id="Surname"><br>
-                <label for="E-mail">E-mail <span class="asterix">*</span>: </label>
-                <input class="input__form" type="email" name="E-mail" id="E-mail" required><br>
-                <label for="YourName">Please insert you name, if you don´t want stay anonymous.<br>
-                Your name: </label>
-                <input class="input__form" type="text" name="Your name" id="YourName"><br>
-                <label for="Message">Please insert the message. And be creative. Believe me, you are doing great thing. <br>
-                Message <span class="asterix">*</span> :</label>
-                <textarea class="textarea__form" name="Message" id="" cols="30" rows="10" id="Message" required></textarea>
+                <div class="part person">
+                    <label for="Name">Please fill in the fields with the persons information you want to thank to. <br>
+                    Name <span class="asterix">*</span>:</label>
+                    <input class="input__form" type="text" name="Name" id="Name" autofocus required><br>
+                    <label for="Surname">Surname <span class="asterix">*</span>:</label>
+                    <input class="input__form" type="text" name="Surname" id="Surname"><br>
+                    <label for="E-mail">E-mail <span class="asterix">*</span>: </label>
+                    <input class="input__form" type="email" name="E-mail" id="E-mail" required><br>
+                </div>
+                <div class="part boss">
+                    <label for="E-mailBoss">Please insert the bosses E-mail of the person you want to thank to.<br>
+                        E-mail <span class="asterix">*</span>: </label>
+                        <input class="input__form" type="text" name="E-mail" id="E-mailBoss"><br>
+                </div>
+                <div class="part nameAndMessage">
+                    <label for="YourName">Please insert you name, if you don´t want stay anonymous.<br>
+                    Your name: </label>
+                    <input class="input__form" type="text" name="Your name" id="YourName"><br>
+                    <label for="Message">Please insert the message. And be creative. Believe me, you are doing great thing. <br>
+                    Message <span class="asterix">*</span> :</label>
+                    <textarea class="textarea__form" name="Message" id="" cols="30" rows="10" id="Message" required></textarea>
+                </div>
             </div> 
             <div class="buttons">
                 <input class="button__primary" type="submit" value="Send it!"  id="SendIt">
@@ -28,3 +36,9 @@ title: Let´s do it!
             </div>  
         </div>
     </form>
+    
+    <!-- <form action="https://mailthis.to/jerabkova.tyna@gmail.com" method="POST">
+        <input type="text" name="name" placeholder="Your name">
+        <input type="email" name="_replyto" placeholder="Your email">
+        <input type="submit" value="Send Email">
+    </form> -->
