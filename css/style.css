@@ -1,4 +1,3 @@
-/* intuitivnější box-sizing pro všechny prvky na stránce */
 html { box-sizing: border-box; }
 *, ::before, ::after { box-sizing: inherit; }
 
@@ -57,11 +56,7 @@ main {
 	list-style: none;
 
 }
-.title {
-	border-bottom: none;
-	margin-bottom: 3em;
-	font-style: italic;
-}
+
 .menu__link {
 	display: block;
 	padding: 15px;
@@ -73,15 +68,16 @@ main {
 	color: var(--blue);
 	background-color: var(--grey);
 }
-
+.menu__item--active .menu__link {
+	background-color: var(--grey);
+	color: var(--blue);
+}
 .menu__checkbox:checked ~ .menu__wrapper {
 	display: block;
 }
 .menu__checkbox:checked ~ .menu__title {
 	display: none;
 }
-
-
 
 @media screen and (min-width: 800px) {
 
@@ -91,7 +87,7 @@ main {
 
 	.menu__wrapper {
 		display: flex !important;
-		justify-content: space-between;
+		justify-content: flex-end;
 
 	}
 	.menu__title {
@@ -111,6 +107,7 @@ main {
 	.menu__link:hover {
 		border-bottom: 2px solid var(--blue);
 	}
+
 }
 /*
  **************************************
@@ -144,21 +141,19 @@ main {
 	height: 1em;
 }
 .footer__logo {
-	width: 100px;
-	height: 50px;
+	text-transform: uppercase;
+	color: var(--blue);
+	font-weight: bold;
+	text-align: center;
 }
 .footer__item {
 	margin: 1em;
 }
-.footer__item--logo {
-	text-transform: uppercase;
-	color: var(--blue);
-	font-weight: bold;
-}
-.red {
+
+.span__red {
 	color: red;
 }
-.wrapper {
+.footer-wrapper {
 	display: flex;
 	background-color: var(--grey);
 	justify-content: space-evenly;
@@ -185,7 +180,7 @@ main {
 
 @media (min-width: 800px) {
 
-	.wrapper {
+	.footer-wrapper {
 		justify-content: space-around;
 	}
 	.footer__left {
@@ -205,19 +200,15 @@ main {
 	BUTTONS
  **************************************
 */
-.button__bar {
+.button-bar {
 	display: flex;
 	justify-content: center;
 }
-.button__primary {
-	display: flex;
-	justify-content: center;
-	margin-top: 20%;
-	margin-bottom: 20%;
-	min-width: 100px;
-	width: 50%;
-	padding: 1em;
+
+.button {
 	font-weight: bolder;
+	min-width: 200px;
+	text-align: center;
 	color: var(--white);
 	background-color: var(--red);
 	border-radius: 10px;
@@ -226,30 +217,25 @@ main {
 	list-style: none;
 	text-decoration: none;
 	cursor: pointer;
-}
-.button__primary:hover {
+	padding: 1em;
+	margin-top: 10%;
+	margin-bottom: 10%;
+
+}	
+
+.button:hover {
 	transform:scale(110%);
+
 }
-.reset {
+.button--reset {
 	background-color: var(--blue);
-	margin-top: 0;
 }
 
 @media (min-width: 800px) {
 
-	.button__primary {
+	.button {
 		width: 300px;
 	}
-}
-
-/*
- **************************************
-	INDEX
- **************************************
-*/
-
-.blockquote {
-	text-align: center;
 }
 
 /*
@@ -257,11 +243,11 @@ main {
 	FORM
  **************************************
 */
-.inputs {
+.form-content {
 	display: flex;
 	flex-direction: column;
 }
-.part {
+.form-part {
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 6em;
@@ -278,8 +264,8 @@ main {
 	
 }
 
-.inpu__form:focus {
-	color: grey;
+.input__form:focus {
+	border-color: grey;
 
 }
 .textarea__form {
@@ -293,37 +279,24 @@ main {
 	color: var(--red);
 }
 
-.buttons {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
 
 @media (min-width: 800px) {
 	
-	.inputs {
+	.form-content {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: space-evenly;
 	}
-	.part {
+	.form-part {
 		justify-content: flex-start;
 	}
 
-	.buttons {
-		flex-direction: row;
-		justify-content: center;
-	}
-	.button__primary {
-		margin-top: 10%;
-	}
 	.input__form {
 		width: 400px;
 	}
 
 }
-
 
 /*
  **************************************
@@ -331,41 +304,53 @@ main {
  **************************************
 */
 
-.Inspiration__Wrapper {
+.block-wrapper {
 	display: grid;
 	grid-template-columns: auto;
 	gap: 0.25em;
 }
 
-.Inspiration {
-	padding: 0px;
+.block__item {
+	padding: 10%;
 	line-height: 1.5;
 	text-align: center;
+	font-size: 1.25em;
 	color: grey;
 	box-shadow: 0px 4px 6px var(--blue-light);
     border-radius: 10px;
 }
 
-.Inspiration:hover {
-	transform:scale(115%);
-}
-.blockquote__inspiration {
-	margin: 0.5em;
+.block__item:hover {
+	transform:scale(105%);
+	background-color: var(--blue);
+	color: var(--white);
 }
 
 @media (min-width: 800px) {
-	.Inspiration__Wrapper {
+	.block-wrapper {
 		grid-template-columns: repeat(3, minmax(100px,600px));
 		gap: 30px;
 		justify-content: space-evenly;
 		align-self: center;
 		}
-	.Inspiration {
+	.block__item {
 		width: auto;
 		height: 300px;
 		text-align: center;
 	}
-	.blockquote__inspiration {
-		text-align: center;
-	}
 }
+
+/*
+ **************************************
+	HOW DOES IT WORK
+ **************************************
+*/
+
+.block__item--big {
+	text-transform: uppercase;
+	font-weight: 900;
+	color: var(--blue);
+	font-size: 4em;
+
+}
+

@@ -2,13 +2,11 @@
 layout: tmplt_main.njk
 title: Let´s do it!
 ---
-<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-    <form action="https://mailthis.to/jerabkova.tyna@gmail.com" method="POST">
+    <form method="POST">
         <div class="form">
-            <div class="inputs">
-                <div class="part person">
-                    <label for="Name">Please fill in the fields with the persons information you want to thank to. <br>
+            <div class="form-content">
+                <div class="form-part">
+                    <label for="Name">Who do you want to thank to?<br>
                     Name <span class="asterix">*</span>:</label>
                     <input class="input__form" type="text" name="Name" id="Name" autofocus required><br>
                     <label for="Surname">Surname <span class="asterix">*</span>:</label>
@@ -16,23 +14,23 @@ title: Let´s do it!
                     <label for="E-mail">E-mail <span class="asterix">*</span>: </label>
                     <input class="input__form" type="email" name="E-mail" id="E-mail" required><br>
                 </div>
-                <div class="part boss">
-                    <label for="E-mailBoss">Please insert the bosses E-mail of the person you want to thank to.<br>
+                <div class="form-part">
+                    <label for="E-mailBoss">What is the E-mail of the person's supervisor?<br>
                         E-mail <span class="asterix">*</span>: </label>
                         <input class="input__form" type="text" name="E-mail" id="E-mailBoss"><br>
                 </div>
-                <div class="part nameAndMessage">
-                    <label for="YourName">Please insert you name, if you don´t want stay anonymous.<br>
+                <div class="form-part">
+                    <label for="YourName">If you want, let the person know that the note is from you.<br>
                     Your name: </label>
                     <input class="input__form" type="text" name="Your name" id="YourName"><br>
-                    <label for="Message">Please insert the message. And be creative. Believe me, you are doing great thing. <br>
+                    <label for="Message">How do you want to express your gratitude? Try to be creative. You are doing a great thing!<br>
                     Message <span class="asterix">*</span> :</label>
                     <textarea class="textarea__form" name="Message" id="" cols="30" rows="10" id="Message" required></textarea>
                 </div>
             </div> 
-            <div class="buttons">
-                <input class="button__primary" type="submit" value="Send it!"  id="SendIt">
-                <input class="button__primary reset"type="reset" value="Start over" id="StartOver">
+            <div class="button-bar">
+                <a class="button" href="/done/">Let's just say THANK YOU!</a>
+                <input class="button button--reset"type="reset" value="Start over" id="StartOver">
             </div>  
         </div>
     </form>
