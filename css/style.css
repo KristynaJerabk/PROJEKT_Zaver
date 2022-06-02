@@ -17,10 +17,9 @@ body {
 	padding: 30px;
 	font-family: var(--font-default);
 	background-color: var(--white)
-
 }
 main {
-	margin-top: 5em;
+	margin-top: 2em;
 }
 
 /*
@@ -203,6 +202,7 @@ main {
 .button-bar {
 	display: flex;
 	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .button {
@@ -220,6 +220,7 @@ main {
 	padding: 1em;
 	margin-top: 10%;
 	margin-bottom: 10%;
+	font-family: var(--font-default);
 
 }	
 
@@ -348,6 +349,7 @@ main {
 
 .block__item--big {
 	text-transform: uppercase;
+	text-align: center;
 	font-weight: 900;
 	color: var(--blue);
 	font-size: 4em;
